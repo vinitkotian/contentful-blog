@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.page-ctn{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blogs-ctn{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,300px));
+    /* grid-template-rows: repeat(3,220px); */
+    align-items: center;
+    justify-items: center;
+    margin:10px;
+}
+
+
+/* @media(min-width:1000px) {
+    .blogs-ctn{
+        display: grid;
+        grid-template-columns: repeat(3,330px);
+        grid-template-rows: repeat(3,220px);
+        align-items: center;
+        justify-items: center;
+        margin:20px;
+    }
+}
+
+@media(max-width:330px){
+    .blogs-ctn{
+        display: grid;
+        grid-template-columns: repeat(1,100%);
+        grid-template-rows: minmax(auto-fill,repeat(6,220px));
+        align-items: center;
+        justify-items: center;
+        margin:20px;
+    }
+} */
+
+.blog-post-item{
+    margin:10px;
+    height: 200px;
+    width:300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font:20px bold;
+}
