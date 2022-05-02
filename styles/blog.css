@@ -13,17 +13,17 @@
 }
 
 
-.blogs-ctn{
+/* .blogs-ctn{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,300px));
-    /* grid-template-rows: repeat(3,220px); */
+    grid-template-rows: repeat(3,220px);
     align-items: center;
     justify-items: center;
     margin:10px;
-}
+} */
 
 
-/* @media(min-width:1000px) {
+@media(min-width:1000px) {
     .blogs-ctn{
         display: grid;
         grid-template-columns: repeat(3,330px);
@@ -43,7 +43,7 @@
         justify-items: center;
         margin:20px;
     }
-} */
+}
 
 .blog-post-item{
     margin:10px;
