@@ -1,4 +1,4 @@
-# Blog using Next Js and Contentful CMS
+# Blog Website demonstartion using Next Js and Contentful CMS
 
 A simple blog demonstration using contentful CMS and Next Js.
 
@@ -10,8 +10,8 @@ Tech stack:
 - Apollo Client
 
 
-Run:
+Run steps:
 
-1. npm run dev - developemnt server.
+1. npm run dev - development server.
 2. npm run build - build for prod.
 3. npm run start - start prod server.
