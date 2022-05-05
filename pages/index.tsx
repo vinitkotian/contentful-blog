@@ -2,12 +2,15 @@ import { gql } from "@apollo/client";
 import client from "../apollo/client";
 import { Paper, Typography } from "@mui/material";
 import Link from "next/link";
+import React from "react";
+import { GetStaticProps } from "next";
+import { blogPost } from "../types/BlogPost";
+import Image from "next/image";
 
 function convertToLocaleDateFormat(date) {
   return new Date(date).toLocaleDateString("en-US");
 }
-
-export default function HomePage({ posts }) {
+const HomePage: React.FC<{ posts: blogPost[] }> = ({ posts }) => {
   return (
     <div className="page-ctn">
       <Typography variant="h2">All Blogs</Typography>
@@ -15,6 +18,7 @@ export default function HomePage({ posts }) {
         {posts.map((post) => {
           return (
             <Paper elevation={5} className={"blog-post-item"} key={post.blogId}>
+             <Image src={post.blogBackground.url} height={"100px"} width={"100px"}/>
               <Link href={`/post/?blogId=${post.blogId}`}>
                 <a>
                   <Typography variant="h6">{post.title}</Typography>
@@ -29,9 +33,9 @@ export default function HomePage({ posts }) {
       </div>
     </div>
   );
-}
+};
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
       query getAllBlogPosts {
@@ -40,15 +44,20 @@ export async function getStaticProps() {
             title
             publishDate
             blogId
+            blogBackground {
+              url
+            }
           }
         }
       }
     `,
   });
-  
+
   return {
     props: {
       posts: data.blogPostCollection["items"],
     },
   };
-}
+};
+
+export default HomePage;

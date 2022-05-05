@@ -52,6 +52,10 @@ const FETCH_POST_BY_ID = gql`
         title
         body
         blogId
+        blogBackground{
+          title
+          url
+        }
       }
     }
   }
