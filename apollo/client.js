@@ -1,13 +1,14 @@
 import {
-    ApolloClient,
-    HttpLink,
-    ApolloLink,
-    InMemoryCache,
-    concat,
-  } from "@apollo/client";
- 
+  ApolloClient,
+  HttpLink,
+  ApolloLink,
+  InMemoryCache,
+  concat,
+} from "@apollo/client";
 
-const httpLink = new HttpLink({ uri: "https://graphql.contentful.com/content/v1/spaces/sms820xd9lm0/environments/master" });
+const httpLink = new HttpLink({
+  uri: "https://graphql.contentful.com/content/v1/spaces/sms820xd9lm0/environments/master",
+});
 
 const authMiddleware = new ApolloLink((operation, forward) => {
   // add the authorization to the headers

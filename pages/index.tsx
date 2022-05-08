@@ -8,7 +8,7 @@ const HomePage: React.FC<{}> = () => {
       <Box className={"backdrop"}>
         <div className="welcome-text">Welcome to Blogspace.</div>
         <Link href={"/browse"} passHref>
-         <button className="browse-link-btn">Explore</button>
+          <button className="browse-link-btn">Explore</button>
         </Link>
       </Box>
     </Box>

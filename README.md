@@ -9,7 +9,6 @@ Tech stack:
 - Contentful CMS
 - Apollo Client
 
-
 Run steps:
 
 1. npm run dev - development server.

@@ -4,9 +4,9 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import React from "react";
 import client from "../apollo/client";
-import {blogPost} from "../types/BlogPost"
+import { blogPost } from "../types/BlogPost";
 
-const BlogPost: React.FC<{ blog:blogPost }> = function BlogPost({ blog }) {
+const BlogPost: React.FC<{ blog: blogPost }> = function BlogPost({ blog }) {
   if (!blog) {
     return (
       <div className="page-ctn">
@@ -28,8 +28,8 @@ const BlogPost: React.FC<{ blog:blogPost }> = function BlogPost({ blog }) {
   );
 };
 
-export const getServerSideProps:GetServerSideProps = async function (context) {
-  const { blogId  } = context.query;
+export const getServerSideProps: GetServerSideProps = async function (context) {
+  const { blogId } = context.query;
 
   const { data } = await client.query({
     query: FETCH_POST_BY_ID,
@@ -43,7 +43,7 @@ export const getServerSideProps:GetServerSideProps = async function (context) {
       blog: blog,
     },
   };
-}
+};
 
 const FETCH_POST_BY_ID = gql`
   query GET_BLOG_BY_ID($blogId: Int!) {
@@ -52,7 +52,7 @@ const FETCH_POST_BY_ID = gql`
         title
         body
         blogId
-        blogBackground{
+        blogBackground {
           title
           url
         }

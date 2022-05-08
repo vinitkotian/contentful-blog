@@ -17,7 +17,12 @@ const BrowseBlogs: React.FC<{ posts: blogPost[] }> = ({ posts }) => {
         {posts.map((post) => {
           return (
             <Paper elevation={5} className={"blog-post-item"} key={post.blogId}>
-             <Image src={post.blogBackground.url} className={"img-back"} height={"150px"} width={"300px"}/>
+              <Image
+                src={post.blogBackground.url}
+                className={"img-back"}
+                height={"150px"}
+                width={"300px"}
+              />
               <Link href={`/post/?blogId=${post.blogId}`}>
                 <a>
                   <Typography variant="h6">{post.title}</Typography>
