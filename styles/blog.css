@@ -93,6 +93,7 @@
   color: white;
   font: bold 1.3rem "Roboto", sans-serif;
   text-decoration: none;
+  margin: "0.5rem";
 }
 
 .backdrop {

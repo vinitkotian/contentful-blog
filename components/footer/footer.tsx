@@ -9,24 +9,24 @@ const Footer: React.FC<{}> = (props) => {
       <Toolbar>
         <Box className={"footer-col footer-col1"}>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>Terms And Conditions</a>
+            <a>Terms And Conditions</a>
           </Link>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>Privacy Policy</a>
+            <a>Privacy Policy</a>
           </Link>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>Cookie Policy</a>
+            <a>Cookie Policy</a>
           </Link>
         </Box>
         <Box className={"footer-col"}>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>About Us</a>
+            <a>About Us</a>
           </Link>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>Contact Us</a>
+            <a>Contact Us</a>
           </Link>
           <Link href="/">
-            <a style={{ margin: "0.2rem" }}>Kickstarter to Blogspace</a>
+            <a>Kickstarter to Blogspace</a>
           </Link>
         </Box>
       </Toolbar>
