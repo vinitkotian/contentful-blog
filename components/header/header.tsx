@@ -13,7 +13,7 @@ export default function Header() {
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             <Link href={"/"} passHref>
-              <Typography variant="h4" sx={{ cursor: "default" }}>
+              <Typography variant="h4" sx={{ cursor: "pointer" }}>
                 Blogspace
               </Typography>
             </Link>

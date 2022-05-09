@@ -21,11 +21,6 @@ const BlogPost: React.FC<{ blog: blogPost }> = function BlogPost({ blog }) {
       <Typography variant="body1" className={"blog-body"}>
         {blog.body}
       </Typography>
-      <Link href="/">
-        <a>
-          <Typography variant="h5">Back To Home</Typography>
-        </a>
-      </Link>
     </div>
   );
 };
