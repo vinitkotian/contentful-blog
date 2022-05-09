@@ -7,7 +7,7 @@ const Footer: React.FC<{}> = (props) => {
   return (
     <AppBar position="static" className={"footer"}>
       <Toolbar>
-        <Box className={"footer-col footer-col1"}>
+        <Box className={"footer-col footer-border"}>
           <Link href="/">
             <a>Terms And Conditions</a>
           </Link>
@@ -18,7 +18,7 @@ const Footer: React.FC<{}> = (props) => {
             <a>Cookie Policy</a>
           </Link>
         </Box>
-        <Box className={"footer-col"}>
+        <Box className={"footer-col footer-border"}>
           <Link href="/">
             <a>About Us</a>
           </Link>
@@ -28,6 +28,20 @@ const Footer: React.FC<{}> = (props) => {
           <Link href="/">
             <a>Kickstarter to Blogspace</a>
           </Link>
+        </Box>
+        <Box className={"footer-col disclaimer"}>
+          <Typography variant="h6" sx={{ textDecoration: "underline" }}>
+            Disclaimer
+          </Typography>
+          <Typography variant="body2">
+            All the information on this website is published in good faith and
+            for general information purpose only. Blogspace does not make any
+            warranties about the completeness, reliability and accuracy of this
+            information. Any action you take upon the information you find on
+            this website (Blogspace.com), is strictly at your own risk. will not
+            be liable for any losses and/or damages in connection with the use
+            of our website.
+          </Typography>
         </Box>
       </Toolbar>
     </AppBar>

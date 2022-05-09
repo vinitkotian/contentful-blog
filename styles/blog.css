@@ -84,7 +84,7 @@
   height: 100%;
 }
 
-.footer-col1 {
+.footer-border {
   border-right: 0.1rem solid white;
   margin-right: 5rem;
 }
@@ -94,6 +94,11 @@
   font: bold 1.3rem "Roboto", sans-serif;
   text-decoration: none;
   margin: "0.5rem";
+}
+
+.disclaimer {
+  width: 100%;
+  height: 100%;
 }
 
 .backdrop {
