@@ -91,14 +91,14 @@
 
 .footer-col > a {
   color: white;
-  font: bold 1.3rem "Roboto", sans-serif;
+  font: bold 1.1rem "Roboto", sans-serif;
   text-decoration: none;
-  margin: "0.5rem";
+  margin: 0.3rem;
 }
 
 .disclaimer {
-  width: 100%;
-  height: 100%;
+  width:70% ;
+  height: 80%;
 }
 
 .backdrop {
