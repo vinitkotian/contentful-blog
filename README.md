@@ -1,4 +1,4 @@
-# Blog Website demonstarting applications of Next Js along with Contentful CMS
+# Blog Website demonstrating application of Next Js along with Contentful CMS
 
 A simple blog demonstration using contentful CMS and Next Js.
 
