@@ -8,6 +8,7 @@ Tech stack:
 - React
 - Contentful CMS
 - Apollo Client
+- Graph Ql
 
 Run steps:
 
