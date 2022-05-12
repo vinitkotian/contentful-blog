@@ -4,12 +4,14 @@ import client from "../apollo/client";
 import React from "react";
 import { AppProps } from "next/app";
 import Layout from "../components/layout/layout";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <Layout>
-        <Component {...pageProps} />
+          <CssBaseline />
+          <Component {...pageProps} />
       </Layout>
     </ApolloProvider>
   );
