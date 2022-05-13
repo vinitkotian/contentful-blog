@@ -4,12 +4,20 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import { Tooltip } from "@mui/material";
+import {makeStyles} from "@mui/styles"
+
+const useStyles = makeStyles({
+  header :{
+    background: "black"
+  }
+})
 
 export default function Header() {
+
+  const  classes = useStyles();
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className={"header"}>
+      <AppBar position="static" className={classes.header}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             <Link href={"/"} passHref>

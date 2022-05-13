@@ -1,13 +1,52 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import { Box, flexbox } from "@mui/system";
-import Image from "next/image";
 import Link from "next/link";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  footer: {
+    background: "black",
+    color: "white",
+    height: "20vh",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+
+  footerCol: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    width: "20rem",
+    height: "100%",
+    a: {
+      color: "white",
+      font: "bold 1.1rem 'Roboto', sans-serif",
+      textDecoration: "none",
+      margin: "0.3rem",
+    },
+  },
+
+  footerBorder: {
+    borderRight: "0.1rem solid white",
+    marginRight: "5rem",
+  },
+
+  disclaimer: {
+    width: "70%",
+    height: "80%",
+  },
+});
 
 const Footer: React.FC<{}> = (props) => {
+  const classes = useStyles();
+
   return (
-    <AppBar position="static" className={"footer"}>
+    <AppBar position="static" className={classes.footer}>
       <Toolbar>
-        <Box className={"footer-col footer-border"}>
+        <Box className={`${classes.footerCol} ${classes.footerBorder}`}>
           <Link href="/">
             <a>Terms And Conditions</a>
           </Link>
@@ -18,7 +57,7 @@ const Footer: React.FC<{}> = (props) => {
             <a>Cookie Policy</a>
           </Link>
         </Box>
-        <Box className={"footer-col footer-border"}>
+        <Box className={`${classes.footerCol} ${classes.footerBorder}`}>
           <Link href="/">
             <a>About Us</a>
           </Link>
@@ -29,7 +68,7 @@ const Footer: React.FC<{}> = (props) => {
             <a>Kickstarter to Blogspace</a>
           </Link>
         </Box>
-        <Box className={"footer-col disclaimer"}>
+        <Box className={`${classes.footerCol} ${classes.disclaimer}`}>
           <Typography variant="h6" sx={{ textDecoration: "underline" }}>
             Disclaimer
           </Typography>

@@ -79,45 +79,7 @@ a {
   border-top-right-radius: 1rem;
 }
 
-.header {
-  background: black;
-}
 
-.footer {
-  background: black;
-  color: white;
-  height: 20vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.footer-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 20rem;
-  height: 100%;
-}
-
-.footer-border {
-  border-right: 0.1rem solid white;
-  margin-right: 5rem;
-}
-
-.footer-col > a {
-  color: white;
-  font: bold 1.1rem "Roboto", sans-serif;
-  text-decoration: none;
-  margin: 0.3rem;
-}
-
-.disclaimer {
-  width: 70%;
-  height: 80%;
-}
 
 .backdrop {
   background: url("../public/backdrop.jpg");

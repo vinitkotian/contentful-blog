@@ -6,17 +6,36 @@ import React from "react";
 import { GetStaticProps } from "next";
 import { blogPost } from "../types/BlogPost";
 import Image from "next/image";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  blogpostItem: {
+    margin: "10px",
+    heigh: "200px",
+    width: "300px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    font: "20px bold",
+    background: "rgb(43, 42, 42)",
+    color: "white",
+    borderRadius: "1rem"
+  }
+})
 
 function convertToLocaleDateFormat(date) {
   return new Date(date).toLocaleDateString("en-US");
 }
+
 const BrowseBlogs: React.FC<{ posts: blogPost[] }> = ({ posts }) => {
+  const classes = useStyles();
   return (
     <div className="page-ctn">
       <div className="blogs-ctn">
         {posts.map((post) => {
           return (
-            <Paper elevation={5} className={"blog-post-item"} key={post.blogId}>
+            <Paper elevation={5} className={classes.blogpostItem} key={post.blogId}>
               <Image
                 src={post.blogBackground.url}
                 className={"img-back"}
