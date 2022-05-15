@@ -5,7 +5,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   footer: {
-    background: "black",
+    background: "black !important",
     color: "white",
     height: "20vh",
     display: "flex",
