@@ -62,18 +62,18 @@ const BrowseBlogs: React.FC<{ posts: blogPost[] }> = ({ posts }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
-      query getAllBlogPosts {
-        blogPostCollection {
-          items {
-            title
-            publishDate
-            blogId
-            blogBackground {
-              url
-            }
+    query getAllBlogPosts {
+      blogPostCollection {
+        items {
+          title
+          publishDate
+          blogId
+          blogBackground {
+            url
           }
         }
       }
+    }
     `,
   });
 
@@ -81,6 +81,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts: data.blogPostCollection["items"],
     },
+    revalidate:30
   };
 };
 

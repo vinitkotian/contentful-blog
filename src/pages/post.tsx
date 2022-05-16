@@ -1,6 +1,7 @@
 import { gql, useQuery } from "@apollo/client";
 import { Typography } from "@mui/material";
 import { GetServerSideProps } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import client from "../apollo/client";
@@ -18,6 +19,13 @@ const BlogPost: React.FC<{ blog: blogPost }> = function BlogPost({ blog }) {
   return (
     <div className="page-ctn">
       <Typography variant="h2">{blog.title}</Typography>
+      <img
+        src={blog.blogBackground.url}
+        height={blog.blogBackground.height>500?700:blog.blogBackground.height}
+        width={blog.blogBackground.width>500?800:blog.blogBackground.width}
+        alt={blog.blogBackground.title}
+        style={{margin:"1rem"}}
+      />
       <Typography variant="body1" className={"blog-body"}>
         {blog.body}
       </Typography>
@@ -52,6 +60,8 @@ const FETCH_POST_BY_ID = gql`
         blogBackground {
           title
           url
+          width
+          height
         }
       }
     }

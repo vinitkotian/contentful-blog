@@ -7,7 +7,10 @@ export type blogPost = {
 };
 
 export type blogBackground = {
+  title:string;
   url: url;
+  height:number;
+  width:number;
 };
 
 export type url = string;
