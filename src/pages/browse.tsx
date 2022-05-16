@@ -41,6 +41,7 @@ const BrowseBlogs: React.FC<{ posts: blogPost[] }> = ({ posts }) => {
                 className={"img-back"}
                 height={"150px"}
                 width={"300px"}
+                alt='background-image-here'
               />
               <Link href={`/post/?blogId=${post.blogId}`}>
                 <a>

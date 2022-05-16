@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     alignItems: "flex-start",
     width: "20rem",
     height: "100%",
-    a: {
+    "& a": {
       color: "white",
       font: "bold 1.1rem 'Roboto', sans-serif",
       textDecoration: "none",
@@ -69,7 +69,7 @@ const Footer: React.FC<{}> = (props) => {
           </Link>
         </Box>
         <Box className={`${classes.footerCol} ${classes.disclaimer}`}>
-          <Typography variant="h6" sx={{ textDecoration: "underline" }}>
+          <Typography variant="h6">
             Disclaimer
           </Typography>
           <Typography variant="body2">
