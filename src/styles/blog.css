@@ -15,6 +15,7 @@
   width: 100vw;
   padding:1rem;
   background: rgb(245,245,245);
+  overflow: scroll;
 }
 
 a {
