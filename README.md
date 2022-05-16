@@ -15,3 +15,5 @@ Run steps:
 1. npm run dev - development server.
 2. npm run build - build for prod.
 3. npm run start - start prod server.
+
+## Live deployment [here](https://contentful-blog-bmlp3ofer-vinitkotian.vercel.app), do check out!
