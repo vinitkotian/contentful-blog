@@ -78,3 +78,52 @@ a {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+
+.browse-link-btn {
+  width: 20rem;
+  height: 2.8rem;
+  margin-right: 5rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid white;
+  color: white;
+  background-color: transparent;
+  font: bold 1.2rem "Anton", sans-serif;
+  cursor: pointer;
+}
+.browse-link-btn:hover{
+  animation-name:btn-colours;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes btn-colours{
+    0%{
+      border: 0.1rem solid #4716F8;
+      color: #4716F8;
+    }
+    
+    20%{
+      border: 0.1rem solid rgb(228, 74, 74);
+      color: rgb(228, 74, 74);
+    }
+
+    40%{
+      border: 0.1rem solid rgb(160, 28, 153);
+      color: rgb(160, 28, 153);
+    }
+
+    60%{
+      border: 0.1rem solid rgb(201, 204, 17);
+      color: rgb(201, 204, 17);
+    }
+
+    80%{
+      border: 0.1rem solid rgb(23, 204, 17);
+      color: rgb(23, 204, 17);
+    }
+
+    100%{
+      border: 0.1rem solid rgb(77, 156, 221);
+      color: rgb(77, 156, 221);
+    }
+}
