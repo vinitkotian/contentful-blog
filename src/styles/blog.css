@@ -35,7 +35,7 @@ a {
   .blogs-ctn {
     display: grid;
     grid-template-columns: repeat(3, 330px);
-    grid-template-rows: repeat(3, 220px);
+    grid-template-rows: repeat(auto-fit, 220px);
     align-items: center;
     justify-items: center;
     margin: 20px;
